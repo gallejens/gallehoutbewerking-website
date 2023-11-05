@@ -1,0 +1,70 @@
+@use 'src/styles/colors.module.scss';
+
+$sidebar_width: 30vh;
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 250px;
+  width: $sidebar_width;
+  background-color: colors.$gray_dark;
+}
+
+.toggle {
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+
+  width: 6vh;
+
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1.1vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > .icon {
+    fill: colors.$green;
+    max-width: 100%;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $sidebar_width;
+  height: 10vh;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  pointer-events: none;
+
+  & > div {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    margin-right: 2vh;
+  }
+}
+
+.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
